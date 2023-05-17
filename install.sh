@@ -16,7 +16,7 @@ temp_dir=$(mktemp -d)
 temp_file="$temp_dir/lg.sh"
 
 # Download the source file
-$downloader "$temp_file" "https://new.shover.us/f/1PZOoh"
+$downloader "$temp_file" "https://raw.githubusercontent.com/siwymilek/lg-sh/main/lg.sh"
 
 # Check if the download was successful
 if [ $? -ne 0 ]; then

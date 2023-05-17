@@ -3,7 +3,7 @@
 # Check the command passed as the first argument
 case "$1" in
   in|i)
-    git init "$:{@:2}"
+    git init "${@:2}"
     ;;
   st|s)
     git status "${@:2}"
@@ -47,23 +47,55 @@ case "$1" in
   cl)
     git clone "${@:2}"
     ;;
+  ff)
+    git fetch --all
+    ;;
+  ch)
+    git cherry-pick "${@:2}"
+    ;;
+  ad|a)
+    git add --all
+    ;;
+  al)
+    git add --all
+    ;;
+  rr)
+    git remote remove "${@:2}"
+    ;;
+  brd)
+    git branch -D "${@:2}"
+    ;;
+  plr)
+    git pull --rebase "${@:2}"
+    ;;
+  ck)
+    git checkout "${@:2}" && git branch --set-upstream-to=origin/"${@:2}"
+    ;;
   *)
     # Display help message
     echo "Git shortcuts:"
-    echo "  st  - git status"
-    echo "  co  - git checkout"
-    echo "  br  - git branch"
-    echo "  cm  - git commit"
-    echo "  pl  - git pull"
-    echo "  ps  - git push"
-    echo "  df  - git diff"
-    echo "  lg  - git log"
-    echo "  tg  - git tag"
-    echo "  mg  - git merge"
-    echo "  rs  - git reset"
-    echo "  rm  - git rm"
-    echo "  re  - git remote"
-    echo "  cl  - git clone"
+    echo "lg st  - git status"
+    echo "lg co  - git checkout"
+    echo "lg br  - git branch"
+    echo "lg cm  - git commit"
+    echo "lg pl  - git pull"
+    echo "lg ps  - git push"
+    echo "lg df  - git diff"
+    echo "lg lg  - git log"
+    echo "lg tg  - git tag"
+    echo "lg mg  - git merge"
+    echo "lg rs  - git reset"
+    echo "lg rm  - git rm"
+    echo "lg re  - git remote"
+    echo "lg cl  - git clone"
+    echo "lg ff  - git fetch --all"
+    echo "lg ch  - git cherry-pick"
+    echo "lg ad  - git add"
+    echo "lg al  - git add --all"
+    echo "lg rr  - git remote remove"
+    echo "lg brd - git branch -D"
+    echo "lg plr - git pull --rebase"
+    echo "lg ck  - git checkout and set upstream"
     ;;
 esac
 
