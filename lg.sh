@@ -23,6 +23,9 @@ case "$1" in
   ps)
     git push "${@:2}"
     ;;
+  pst)
+    git push --tags "${@:2}"
+    ;;
   df|d)
     git diff "${@:2}"
     ;;
@@ -80,6 +83,7 @@ case "$1" in
     echo "lg cm  - git commit"
     echo "lg pl  - git pull"
     echo "lg ps  - git push"
+    echo "lg pst  - git push --tags"
     echo "lg df  - git diff"
     echo "lg lg  - git log"
     echo "lg tg  - git tag"
