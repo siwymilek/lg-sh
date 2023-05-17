@@ -34,7 +34,7 @@ wget -qO- https://raw.githubusercontent.com/siwymilek/lg-sh/main/install.sh | ba
 | lg cl        | -               | git clone         |
 | lg ff        | -               | git fetch --all   |
 | lg ch        | -               | git cherry-pick   |
-| lg ad        | -               | git add           |
+| lg ad        | lg a            | git add           |
 | lg al        | -               | git add --all     |
 | lg rr        | -               | git remote remove |
 | lg brd       | -               | git branch -D     |
