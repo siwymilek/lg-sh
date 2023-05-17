@@ -54,7 +54,7 @@ case "$1" in
     git cherry-pick "${@:2}"
     ;;
   ad|a)
-    git add --all
+    git add
     ;;
   al)
     git add --all
