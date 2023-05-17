@@ -10,7 +10,7 @@ curl -o- https://raw.githubusercontent.com/siwymilek/lg-sh/main/install.sh | bas
 ```
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/siwymilek/lg-sh/main/install.sh | bash`
+wget -qO- https://raw.githubusercontent.com/siwymilek/lg-sh/main/install.sh | bash
 ```
 
 ## Available commands
