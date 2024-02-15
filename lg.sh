@@ -17,6 +17,9 @@ case "$1" in
   cm)
     git commit "${@:2}"
     ;;
+  cma)
+    git commit --amend --no-edit "${@:2}"
+    ;;
   pl)
     git pull "${@:2}"
     ;;
@@ -25,6 +28,9 @@ case "$1" in
     ;;
   pst)
     git push --tags "${@:2}"
+    ;;
+  psf)
+    git push --force "${@:2}"
     ;;
   df|d)
     git diff "${@:2}"
@@ -81,9 +87,11 @@ case "$1" in
     echo "lg co  - git checkout"
     echo "lg br  - git branch"
     echo "lg cm  - git commit"
+    echo "lg cma  - git commit --amend --no-edit"
     echo "lg pl  - git pull"
     echo "lg ps  - git push"
     echo "lg pst  - git push --tags"
+    echo "lg psf  - git push --force"
     echo "lg df  - git diff"
     echo "lg lg  - git log"
     echo "lg tg  - git tag"
@@ -102,4 +110,3 @@ case "$1" in
     echo "lg ck  - git checkout and set upstream"
     ;;
 esac
-
